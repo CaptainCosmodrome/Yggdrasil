@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Azure", "2 - Azure", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Logging.AppInsights", "Yggdrasil.Logging.AppInsights\Yggdrasil.Logging.AppInsights.csproj", "{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Configuration.Azure", "Yggdrasil.Configuration.Azure\Yggdrasil.Configuration.Azure.csproj", "{6B1AB4B5-8726-497E-B6E9-D1F1E7FB2F70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B1AB4B5-8726-497E-B6E9-D1F1E7FB2F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B1AB4B5-8726-497E-B6E9-D1F1E7FB2F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B1AB4B5-8726-497E-B6E9-D1F1E7FB2F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B1AB4B5-8726-497E-B6E9-D1F1E7FB2F70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{A8927C84-A06D-40C1-B1C8-ACE4C3FD952C} = {22688543-18EA-4A9A-AFB5-C8BCCDCA1210}
 		{69C31D00-9F3C-450B-9255-0EE67463472B} = {932878B7-66C3-4628-AD65-68D75DF78DEF}
 		{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6} = {F599AF59-5830-434F-8090-855D946EA1B5}
+		{6B1AB4B5-8726-497E-B6E9-D1F1E7FB2F70} = {F599AF59-5830-434F-8090-855D946EA1B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9C6D16A-6418-4DE0-8F54-D434C9CD15B0}
