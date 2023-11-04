@@ -2,6 +2,7 @@
 using Shouldly;
 using Yggdrasil.Core.Interfaces;
 using Yggdrasil.Security.Cryptography;
+using Yggdrasil.Security.Cryptography.KeyGenerators;
 using Yggdrasil.Security.Cryptography.Providers;
 
 namespace Yggdrasil.Security.UnitTests.Cryptography;
