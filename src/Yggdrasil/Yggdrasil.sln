@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Core", "Yggdrasil.Core\Yggdrasil.Core.csproj", "{2961988C-2D89-420A-A0BF-FC0A950D28B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Core.UnitTests", "Yggdrasil.Core.UnitTests\Yggdrasil.Core.UnitTests.csproj", "{A8927C84-A06D-40C1-B1C8-ACE4C3FD952C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Core", "1 - Core", "{932878B7-66C3-4628-AD65-68D75DF78DEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Tests", "3 - Tests", "{22688543-18EA-4A9A-AFB5-C8BCCDCA1210}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Security", "Yggdrasil.Security\Yggdrasil.Security.csproj", "{69C31D00-9F3C-450B-9255-0EE67463472B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Azure", "2 - Azure", "{F599AF59-5830-434F-8090-855D946EA1B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Logging.AppInsights", "Yggdrasil.Logging.AppInsights\Yggdrasil.Logging.AppInsights.csproj", "{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2961988C-2D89-420A-A0BF-FC0A950D28B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2961988C-2D89-420A-A0BF-FC0A950D28B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2961988C-2D89-420A-A0BF-FC0A950D28B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2961988C-2D89-420A-A0BF-FC0A950D28B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8927C84-A06D-40C1-B1C8-ACE4C3FD952C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8927C84-A06D-40C1-B1C8-ACE4C3FD952C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8927C84-A06D-40C1-B1C8-ACE4C3FD952C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8927C84-A06D-40C1-B1C8-ACE4C3FD952C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C31D00-9F3C-450B-9255-0EE67463472B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C31D00-9F3C-450B-9255-0EE67463472B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C31D00-9F3C-450B-9255-0EE67463472B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C31D00-9F3C-450B-9255-0EE67463472B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2961988C-2D89-420A-A0BF-FC0A950D28B5} = {932878B7-66C3-4628-AD65-68D75DF78DEF}
+		{A8927C84-A06D-40C1-B1C8-ACE4C3FD952C} = {22688543-18EA-4A9A-AFB5-C8BCCDCA1210}
+		{69C31D00-9F3C-450B-9255-0EE67463472B} = {932878B7-66C3-4628-AD65-68D75DF78DEF}
+		{F2231E1A-1BBF-4C3D-9914-B0A68CBCB6E6} = {F599AF59-5830-434F-8090-855D946EA1B5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9C6D16A-6418-4DE0-8F54-D434C9CD15B0}
+	EndGlobalSection
+EndGlobal
