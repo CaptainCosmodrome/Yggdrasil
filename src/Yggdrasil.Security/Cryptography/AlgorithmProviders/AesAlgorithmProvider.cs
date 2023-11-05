@@ -1,13 +1,13 @@
 ﻿using System.Security.Cryptography;
 using Yggdrasil.Core.Interfaces;
 
-namespace Yggdrasil.Security.Cryptography.Providers;
+namespace Yggdrasil.Security.Cryptography.AlgorithmProviders;
 
 public class AesAlgorithmProvider : ICryptographicAlgorithmProvider
 {
-    private readonly ICryptographicKeyGenerator _keyGenerator;
+    private readonly ICryptographicKeyProvider _keyGenerator;
 
-    public AesAlgorithmProvider(ICryptographicKeyGenerator keyGenerator)
+    public AesAlgorithmProvider(ICryptographicKeyProvider keyGenerator)
     {
         _keyGenerator = keyGenerator;
     }

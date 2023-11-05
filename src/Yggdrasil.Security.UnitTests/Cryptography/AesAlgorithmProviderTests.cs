@@ -1,8 +1,7 @@
 ﻿using Moq;
-using Shouldly;
 using Yggdrasil.Core.Interfaces;
+using Yggdrasil.Security.Cryptography.AlgorithmProviders;
 using Yggdrasil.Security.Cryptography.KeyGenerators;
-using Yggdrasil.Security.Cryptography.Providers;
 
 namespace Yggdrasil.Security.UnitTests.Cryptography;
 
@@ -11,12 +10,12 @@ public class AesAlgorithmProviderTests
 {
     private ICryptographicAlgorithmProvider _target;
 
-    private Mock<ICryptographicKeyGenerator> _keyGeneratorMock;
+    private Mock<ICryptographicKeyProvider> _keyGeneratorMock;
 
     [SetUp]
     public void BeforeEachTest()
     {
-        _keyGeneratorMock = new Mock<ICryptographicKeyGenerator>();
+        _keyGeneratorMock = new Mock<ICryptographicKeyProvider>();
 
         _target = new AesAlgorithmProvider(_keyGeneratorMock.Object);
     }
@@ -33,7 +32,7 @@ public class AesAlgorithmProviderTests
         _keyGeneratorMock.Setup(_ => _.CreateKey(It.Is<string>(x => string.Equals(x, key)),
                 It.Is<string>(x => string.Equals(x, salt)),
                 It.Is<int>(x => x == iterations)))
-            .Returns(new Rfc2989CryptographicKeyGenerator().CreateKey(key,
+            .Returns(new Rfc2989CryptographicKeyProvider().CreateKey(key,
                 salt, iterations));
 
         var algo = _target.CreateSymmetricAlgorithm(key, salt, iterations);
@@ -53,7 +52,7 @@ public class AesAlgorithmProviderTests
         _keyGeneratorMock.Setup(_ => _.CreateKey(It.Is<string>(x => string.Equals(x, key)),
                 It.Is<string>(x => string.Equals(x, salt)),
                 It.Is<int>(x => x == iterations)))
-            .Returns(new Rfc2989CryptographicKeyGenerator().CreateKey(key,
+            .Returns(new Rfc2989CryptographicKeyProvider().CreateKey(key,
                 salt, iterations));
 
         var algo = _target.CreateSymmetricAlgorithm(key, salt, iterations);

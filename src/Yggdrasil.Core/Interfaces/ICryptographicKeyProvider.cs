@@ -2,7 +2,7 @@
 
 namespace Yggdrasil.Core.Interfaces;
 
-public interface ICryptographicKeyGenerator
+public interface ICryptographicKeyProvider
 {
     DeriveBytes CreateKey(string key, string salt, int iterations = 1000);
 }

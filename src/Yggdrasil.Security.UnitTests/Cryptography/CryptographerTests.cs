@@ -1,9 +1,8 @@
 ﻿using Moq;
-using Shouldly;
 using Yggdrasil.Core.Interfaces;
 using Yggdrasil.Security.Cryptography;
+using Yggdrasil.Security.Cryptography.AlgorithmProviders;
 using Yggdrasil.Security.Cryptography.KeyGenerators;
-using Yggdrasil.Security.Cryptography.Providers;
 
 namespace Yggdrasil.Security.UnitTests.Cryptography;
 
@@ -32,7 +31,7 @@ public class CryptographerTests
         _algoritmProviderMock.Setup(_ => _.CreateSymmetricAlgorithm(It.Is<string>(x => string.Equals(x, key)),
                 It.Is<string>(x => string.Equals(x, salt)),
                 It.Is<int>(x => x == iterations)))
-            .Returns(new AesAlgorithmProvider(new Rfc2989CryptographicKeyGenerator()).CreateSymmetricAlgorithm(key,
+            .Returns(new AesAlgorithmProvider(new Rfc2989CryptographicKeyProvider()).CreateSymmetricAlgorithm(key,
                 salt, iterations));
 
         var text = "Thi$ is a tes7";
@@ -54,7 +53,7 @@ public class CryptographerTests
         _algoritmProviderMock.Setup(_ => _.CreateSymmetricAlgorithm(It.Is<string>(x => string.Equals(x, key)),
                 It.Is<string>(x => string.Equals(x, salt)),
                 It.Is<int>(x => x == iterations)))
-            .Returns(new AesAlgorithmProvider(new Rfc2989CryptographicKeyGenerator()).CreateSymmetricAlgorithm(key,
+            .Returns(new AesAlgorithmProvider(new Rfc2989CryptographicKeyProvider()).CreateSymmetricAlgorithm(key,
                 salt, iterations));
 
         var expected = "Thi$ is a tes7";

@@ -1,4 +1,4 @@
-﻿namespace Yggdrasil.Security.Hmac;
+﻿namespace Yggdrasil.Core.Enums;
 
 public enum HmacValidationResult
 {

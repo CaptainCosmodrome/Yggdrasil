@@ -5,12 +5,12 @@ namespace Yggdrasil.Security;
 
 public class SecurityConfigurationOptions
 {
-    public Type DefaultKeyGeneratorType { get; set; } = typeof(Rfc2989CryptographicKeyGenerator);
-    public Type DefaultAlgorithmProviderType { get; set; } = typeof(Rfc2989CryptographicKeyGenerator);
+    public Type DefaultKeyProviderType { get; set; } = typeof(Rfc2989CryptographicKeyProvider);
+    public Type DefaultAlgorithmProviderType { get; set; } = typeof(Rfc2989CryptographicKeyProvider);
 
-    public SecurityConfigurationOptions SetDefaultKeyGenerator<TKeyGenerator>() where TKeyGenerator : ICryptographicKeyGenerator
+    public SecurityConfigurationOptions SetDefaultKeyGenerator<TKeyProvider>() where TKeyProvider : ICryptographicKeyProvider
     {
-        DefaultKeyGeneratorType = typeof(TKeyGenerator);
+        DefaultKeyProviderType = typeof(TKeyProvider);
 
         return this;
     }

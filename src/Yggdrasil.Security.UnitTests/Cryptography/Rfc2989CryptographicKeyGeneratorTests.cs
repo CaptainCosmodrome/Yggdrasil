@@ -1,5 +1,4 @@
-﻿using Shouldly;
-using Yggdrasil.Core.Interfaces;
+﻿using Yggdrasil.Core.Interfaces;
 using Yggdrasil.Security.Cryptography.KeyGenerators;
 
 namespace Yggdrasil.Security.UnitTests.Cryptography;
@@ -7,12 +6,12 @@ namespace Yggdrasil.Security.UnitTests.Cryptography;
 [TestFixture]
 public class Rfc2989CryptographicKeyGeneratorTests
 {
-    private ICryptographicKeyGenerator _target;
+    private ICryptographicKeyProvider _target;
 
     [SetUp]
     public void BeforeEachTest()
     {
-        _target = new Rfc2989CryptographicKeyGenerator();
+        _target = new Rfc2989CryptographicKeyProvider();
     }
 
     [Test]

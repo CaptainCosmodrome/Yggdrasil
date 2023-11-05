@@ -4,7 +4,7 @@ using Yggdrasil.Core.Interfaces;
 
 namespace Yggdrasil.Security.Cryptography.KeyGenerators;
 
-public class Rfc2989CryptographicKeyGenerator : ICryptographicKeyGenerator
+public class Rfc2989CryptographicKeyProvider : ICryptographicKeyProvider
 {
     public DeriveBytes CreateKey(string key, string salt, int iterations = 1000)
     {
