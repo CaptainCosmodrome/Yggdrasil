@@ -3,6 +3,7 @@ using Yggdrasil.Core.Interfaces;
 using Yggdrasil.Security;
 using Yggdrasil.Security.Cryptography;
 using Yggdrasil.Security.Hmac;
+using Yggdrasil.Security.OneTimePassword;
 
 namespace Yggdrasil.Core.DependencyInjection;
 
@@ -22,6 +23,7 @@ public static class DependencyInjection
         services.AddSingleton<ICryptographer, Cryptographer>();
 
         services.AddSingleton<IExpiringHmacProvider, ExpiringHmacProvider>();
+        services.AddSingleton<IHmacBasedOneTimePasswordProvider, Rfc4226OneTimePasswordProvider>();
 
         return services;
     }
