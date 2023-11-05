@@ -105,7 +105,7 @@ public class Rfc4226OneTimePasswordProviderTests
 
         var otp = "1821312"; // expected = 1821313
 
-        var result = _target.ValidateOneTimePassword(otp, secret, movingFactor);
+        var result = _target.ValidateOneTimePassword(otp, secret, movingFactor, 6, true);
 
         result.ShouldBe(OneTimePasswordValidationResult.InvalidChecksum);
     }

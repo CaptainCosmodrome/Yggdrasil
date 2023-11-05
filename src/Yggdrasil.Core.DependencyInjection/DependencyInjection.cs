@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Yggdrasil.Core.Configuration;
 using Yggdrasil.Core.Interfaces;
-using Yggdrasil.Security;
 using Yggdrasil.Security.Cryptography;
 using Yggdrasil.Security.Hmac;
 using Yggdrasil.Security.OneTimePassword;
@@ -17,13 +17,16 @@ public static class DependencyInjection
         {
             action(options);
         }
+
+        services.AddTransient<HmacOneTimePasswordOptions>(ctx => options.HmacOneTimePasswordOptions);
+        services.AddTransient<TimeBasedOneTimePasswordOptions>(ctx => options.TimeBasedOneTimePasswordOptions);
         
         services.AddSingleton(typeof(ICryptographicKeyProvider), options.DefaultKeyProviderType);
         services.AddSingleton(typeof(ICryptographicAlgorithmProvider), options.DefaultAlgorithmProviderType);
         services.AddSingleton<ICryptographer, Cryptographer>();
 
-        services.AddSingleton<IExpiringHmacProvider, ExpiringHmacProvider>();
-        services.AddSingleton<IHmacBasedOneTimePasswordProvider, Rfc4226OneTimePasswordProvider>();
+        services.AddTransient<IExpiringHmacProvider, ExpiringHmacProvider>();
+        services.AddTransient<IHmacBasedOneTimePasswordProvider, Rfc4226OneTimePasswordProvider>();
 
         return services;
     }
