@@ -5,14 +5,10 @@ using Yggdrasil.Security.Helpers;
 
 namespace Yggdrasil.Security.OneTimePassword;
 
-public class Rfc6238OneTimePasswordProvider : ITimeBasedOneTimePasswordProvider
+public class Rfc6238OneTimePasswordProvider
+    (TimeBasedOneTimePasswordOptions options = null) : ITimeBasedOneTimePasswordProvider
 {
-    private readonly TimeBasedOneTimePasswordOptions _options;
-
-    public Rfc6238OneTimePasswordProvider(TimeBasedOneTimePasswordOptions options = null)
-    {
-        _options = options ?? new TimeBasedOneTimePasswordOptions();
-    }
+    private readonly TimeBasedOneTimePasswordOptions _options = options ?? new TimeBasedOneTimePasswordOptions();
 
     public void VerifyOptions()
     {

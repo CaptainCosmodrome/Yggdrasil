@@ -21,9 +21,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yggdrasil.Configuration.Azu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yggdrasil.Security.UnitTests", "Yggdrasil.Security.UnitTests\Yggdrasil.Security.UnitTests.csproj", "{90773812-EEA1-42F4-ABAF-09ED1419E35D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Core.DependencyInjection", "Yggdrasil.Core.DependencyInjection\Yggdrasil.Core.DependencyInjection.csproj", "{039A1506-4433-42E0-8DA1-5D6652CEDDA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yggdrasil.Core.DependencyInjection", "Yggdrasil.Core.DependencyInjection\Yggdrasil.Core.DependencyInjection.csproj", "{039A1506-4433-42E0-8DA1-5D6652CEDDA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Core.DependencyInjection.UnitTests", "Yggdrasil.Core.DependencyInjection.UnitTests\Yggdrasil.Core.DependencyInjection.UnitTests.csproj", "{6CF2ABDA-3AAB-4B04-A6A0-39C96BD447E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yggdrasil.Core.DependencyInjection.UnitTests", "Yggdrasil.Core.DependencyInjection.UnitTests\Yggdrasil.Core.DependencyInjection.UnitTests.csproj", "{6CF2ABDA-3AAB-4B04-A6A0-39C96BD447E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yggdrasil.Configuration.AppSettings", "Yggdrasil.Configuration.AppSettings\Yggdrasil.Configuration.AppSettings.csproj", "{677F9FAF-0CC4-4B40-A0BE-1338CB34B19E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Security.Certificates", "Yggdrasil.Security.Certificates\Yggdrasil.Security.Certificates.csproj", "{55253182-3EC7-4258-99B6-B825EA0B80EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Security.Certificates.UnitTests", "Yggdrasil.Security.Certificates.UnitTests\Yggdrasil.Security.Certificates.UnitTests.csproj", "{4BB659EB-9DA9-4692-B0E7-9D7CB13D588D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,18 @@ Global
 		{6CF2ABDA-3AAB-4B04-A6A0-39C96BD447E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CF2ABDA-3AAB-4B04-A6A0-39C96BD447E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CF2ABDA-3AAB-4B04-A6A0-39C96BD447E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{677F9FAF-0CC4-4B40-A0BE-1338CB34B19E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{677F9FAF-0CC4-4B40-A0BE-1338CB34B19E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{677F9FAF-0CC4-4B40-A0BE-1338CB34B19E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{677F9FAF-0CC4-4B40-A0BE-1338CB34B19E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55253182-3EC7-4258-99B6-B825EA0B80EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55253182-3EC7-4258-99B6-B825EA0B80EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55253182-3EC7-4258-99B6-B825EA0B80EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55253182-3EC7-4258-99B6-B825EA0B80EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB659EB-9DA9-4692-B0E7-9D7CB13D588D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB659EB-9DA9-4692-B0E7-9D7CB13D588D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB659EB-9DA9-4692-B0E7-9D7CB13D588D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB659EB-9DA9-4692-B0E7-9D7CB13D588D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +94,9 @@ Global
 		{90773812-EEA1-42F4-ABAF-09ED1419E35D} = {22688543-18EA-4A9A-AFB5-C8BCCDCA1210}
 		{039A1506-4433-42E0-8DA1-5D6652CEDDA3} = {932878B7-66C3-4628-AD65-68D75DF78DEF}
 		{6CF2ABDA-3AAB-4B04-A6A0-39C96BD447E9} = {22688543-18EA-4A9A-AFB5-C8BCCDCA1210}
+		{677F9FAF-0CC4-4B40-A0BE-1338CB34B19E} = {F599AF59-5830-434F-8090-855D946EA1B5}
+		{55253182-3EC7-4258-99B6-B825EA0B80EB} = {932878B7-66C3-4628-AD65-68D75DF78DEF}
+		{4BB659EB-9DA9-4692-B0E7-9D7CB13D588D} = {22688543-18EA-4A9A-AFB5-C8BCCDCA1210}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9C6D16A-6418-4DE0-8F54-D434C9CD15B0}

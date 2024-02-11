@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Yggdrasil.Core\Yggdrasil.Core.csproj" />
+    <ProjectReference Include="..\Yggdrasil.Security\Yggdrasil.Security.csproj" />
   </ItemGroup>
 
 </Project>

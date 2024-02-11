@@ -6,15 +6,8 @@ using Yggdrasil.Security.Extensions;
 
 namespace Yggdrasil.Security.Hmac;
 
-public class ExpiringHmacProvider : IExpiringHmacProvider
+public class ExpiringHmacProvider(ICryptographer cryptographer) : IExpiringHmacProvider
 {
-    private readonly ICryptographer _cryptographer;
-
-    public ExpiringHmacProvider(ICryptographer cryptographer)
-    {
-        _cryptographer = cryptographer;
-    }
-
     public Task<string> GenerateHmacAsync(string key, string salt, TimeSpan lifetime, int iterations = 1000,
         params string[] data)
     {
@@ -43,7 +36,7 @@ public class ExpiringHmacProvider : IExpiringHmacProvider
         //write the expiry timestamp as the first 8 bytes (we need this in order to be able to verify the hmac)
         BitConverter.GetBytes(expiry.Ticks).CopyTo(hmacBytes, 0);
 
-        hmac = await _cryptographer.EncryptAsync(Convert.ToBase64String(hmacBytes), key, salt, iterations);
+        hmac = await cryptographer.EncryptAsync(Convert.ToBase64String(hmacBytes), key, salt, iterations);
 
         return hmac.EncodeForQuerystring();
     }
@@ -56,7 +49,7 @@ public class ExpiringHmacProvider : IExpiringHmacProvider
 
         try
         {
-            hmacBytes = Convert.FromBase64String(await _cryptographer.DecryptAsync(decodedHmac, key, salt, iterations));
+            hmacBytes = Convert.FromBase64String(await cryptographer.DecryptAsync(decodedHmac, key, salt, iterations));
         }
         catch (FormatException e)
         {

@@ -9,18 +9,12 @@ namespace Yggdrasil.Security.OneTimePassword;
 /// Create a numeric hmac-based one-time password using the RFC-4226 standards
 /// </summary>
 /// <see cref="http://tools.ietf.org/html/rfc4226"/>
-public class Rfc4226OneTimePasswordProvider : IHmacBasedOneTimePasswordProvider
+public class Rfc4226OneTimePasswordProvider
+    (HmacOneTimePasswordOptions options = null) : IHmacBasedOneTimePasswordProvider
 {
-    protected int CodeDigits { get; private set; }
-    protected bool AddCheckSum { get; private set; }
-    protected int TruncationOffset { get; private set; }
-
-    public Rfc4226OneTimePasswordProvider(HmacOneTimePasswordOptions options = null)
-    {
-        CodeDigits = options?.CodeDigits ?? 6;
-        AddCheckSum = options?.AddCheckSum ?? false;
-        TruncationOffset = options?.TruncationOffset ?? 4;
-    }
+    protected int CodeDigits { get; private set; } = options?.CodeDigits ?? 6;
+    protected bool AddCheckSum { get; private set; } = options?.AddCheckSum ?? false;
+    protected int TruncationOffset { get; private set; } = options?.TruncationOffset ?? 4;
 
     /// <summary>
     /// Generate a numeric Hmac-based One Time Password
