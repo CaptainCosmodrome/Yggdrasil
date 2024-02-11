@@ -39,6 +39,9 @@ public class SelfSigned_RsaCertificateFactoryTests
                 _caStore.Remove(ca);
             }
         }
+
+        _caCertificate.Dispose();
+        _caStore.Dispose();
     }
 
     [Test]
@@ -68,7 +71,7 @@ public class SelfSigned_RsaCertificateFactoryTests
             }
         }
 
-        Assert.IsTrue(chainBuilt, "Chain");
-        Assert.IsTrue(_caCertificate.Verify());
+        Assert.That(chainBuilt, "Chain");
+        Assert.That(_caCertificate.Verify());
     }
 }

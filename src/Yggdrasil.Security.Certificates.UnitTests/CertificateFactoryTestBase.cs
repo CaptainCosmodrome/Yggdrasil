@@ -46,5 +46,8 @@ public abstract class CertificateFactoryTestBase
                 _store.Remove(ca);
             }
         }
+
+        _caStore.Dispose();
+        _store.Dispose();
     }
 }

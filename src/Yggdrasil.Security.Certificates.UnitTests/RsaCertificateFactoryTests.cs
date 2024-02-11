@@ -54,7 +54,7 @@ public class RsaCertificateFactoryTests : CertificateFactoryTestBase
             }
         }
 
-        Assert.IsTrue(chainBuilt, "Chain");
+        Assert.That(chainBuilt, "Chain");
     }
 
     public static IEnumerable<AlgorithmDefinition> GetECDsaAlgorithms()
