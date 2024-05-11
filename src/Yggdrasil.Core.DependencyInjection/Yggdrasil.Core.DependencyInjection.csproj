@@ -14,6 +14,7 @@
     <ProjectReference Include="..\Yggdrasil.Configuration.Azure\Yggdrasil.Configuration.Azure.csproj" />
     <ProjectReference Include="..\Yggdrasil.Core\Yggdrasil.Core.csproj" />
     <ProjectReference Include="..\Yggdrasil.Logging.AppInsights\Yggdrasil.Logging.AppInsights.csproj" />
+    <ProjectReference Include="..\Yggdrasil.Security.Certificates\Yggdrasil.Security.Certificates.csproj" />
     <ProjectReference Include="..\Yggdrasil.Security\Yggdrasil.Security.csproj" />
   </ItemGroup>
 

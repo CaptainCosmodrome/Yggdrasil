@@ -1,6 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Yggdrasil.Core.Configuration;
+using Yggdrasil.Core.Enums;
 using Yggdrasil.Core.Interfaces;
+using Yggdrasil.Security.Certificates.Factories;
+using Yggdrasil.Security.Certificates.Interfaces;
 using Yggdrasil.Security.Cryptography;
 using Yggdrasil.Security.Hmac;
 using Yggdrasil.Security.OneTimePassword;
@@ -27,6 +30,9 @@ public static class DependencyInjection
 
         services.AddTransient<IExpiringHmacProvider, ExpiringHmacProvider>();
         services.AddTransient<IHmacBasedOneTimePasswordProvider, Rfc4226OneTimePasswordProvider>();
+
+        services.AddKeyedSingleton<ICertificateFactory, ECDsaCertificateFactory>(AlgorithmEnum.ECDSA);
+        services.AddKeyedSingleton<ICertificateFactory, RsaCertificateFactory>(AlgorithmEnum.Rsa);
 
         return services;
     }

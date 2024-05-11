@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Yggdrasil.Core\Yggdrasil.Core.csproj" />
+    <ProjectReference Include="..\Yggdrasil.Security.Certificates\Yggdrasil.Security.Certificates.csproj" />
     <ProjectReference Include="..\Yggdrasil.Security\Yggdrasil.Security.csproj" />
   </ItemGroup>
 
